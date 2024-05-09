@@ -7,26 +7,53 @@
     <title>Случайное аниме</title>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container-header">
-            <a href="index.html" class="navbar-brand">AniLife</a>
+    
+    
+    <header class="navbar">
 
-        <div class="navbar-wrap">
-            <ul class="navbar-menu">
+        <a href="index.html" class="navbar-brand">AniLife</a>
+
+        <nav>
+            <ul>
                 <li><a href="#">О нас</a></li>
-                <li><a href="#">Аниме</a></li>
-                <li><a href="#">Случайное аниме</a></li>
+                <li><a href="#">Аниме</a>
+                    <ul class="drop-down">
+                        <li><a href="#">2024</a></li>
+                        <li><a href="#">2023</a></li>
+                        <li><a href="#">2022</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="card-anime.html">Случайное аниме</a></li>
                 <li><a href="#">Персонажи</a></li>
 
+                <button class="entry">&#128100;</button>
             </ul>
 
-            <button class="entry">&#128100;</button>
+        </nav>
 
+    </header>
+
+    <div class="trailer--anime">
+        <div class="trailer">
+        <video  id="trailer" class="trailer__anime" src="trailer.mp4" autoplay muted loop></video>
+        </div>  
+        <div class="info--anime">
+        
+                <div class="">
+                    <h1 style="color: red">Новое аниме</h1>
+                    <h4 style="color: green" >Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
+
+                    <button>Смотреть</button>
+                </div>
+
+                <button class="mutebtn">🔊</button>
         </div>
 
-        </div>
-    </nav>
+        <div class="overlay"></div>
 
+    </div>
 
+    <script src="app.js"></script>
 </body>
 </html>

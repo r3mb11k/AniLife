@@ -7,25 +7,32 @@
     <title>AniLife</title>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container-header">
-            <a href="index.html" class="navbar-brand">AniLife</a>
 
-        <div class="navbar-wrap">
-            <ul class="navbar-menu">
+
+    <header class="navbar">
+
+        <a href="index.html" class="navbar-brand">AniLife</a>
+
+        <nav>
+            <ul>
                 <li><a href="#">О нас</a></li>
-                <li><a href="#">Аниме</a></li>
+                <li><a href="#">Аниме</a>
+                    <ul class="drop-down">
+                        <li><a href="#">2024</a></li>
+                        <li><a href="#">2023</a></li>
+                        <li><a href="#">2022</a></li>
+                    </ul>
+
+                </li>
                 <li><a href="card-anime.html">Случайное аниме</a></li>
                 <li><a href="#">Персонажи</a></li>
 
+                <button class="entry">&#128100;</button>
             </ul>
 
-            <button class="entry">&#128100;</button>
+        </nav>
 
-        </div>
-
-        </div>
-    </nav>
+    </header>
 
     <header class="header">
 
@@ -65,5 +72,7 @@
 
         </div>
     </div>
+
+    <script src="app.js"></script>
 </body>
 </html>

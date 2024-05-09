@@ -2,76 +2,107 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
 .navbar {
-    width: 100%;
-    height: 60px;
-}
-
-.container-header {
-    height: inherit;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
+    background: #ffffff;
     justify-content: space-between;
     align-items: center;
-    background-color: #000000;
+    padding: 0;
+    height: 100%;
+    width: 100%;
     z-index: 3;
 }
 
-.navbar-menu {
-    list-style-type: none;
-    margin-bottom: 0;
-    padding-left: 0;
-    margin-right: 30px;
-    font-size: 20px;
+.navbar ul li {
+    display: inline-block;
 }
 
-.navbar-menu li {
-    display: inline-block;
+nav li {
+    position: relative;
+}
 
+nav li:hover .drop-down {
+    display: block;
 }
 
 
-.navbar-menu li a {
-    display: inline-block;
-    color: rgb(255, 255, 255);
-    opacity: 0.5;
+nav li a {
     text-decoration: none;
-    padding: 10px;
-    transition: all 0.3s ease-in-out;
+    padding: 15px;
+    color:black;
+    font-size: 20px;
+    display: block;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
-.navbar-menu li a:hover {
-    opacity: 1;
+
+nav li a:hover {
+    background-color: black;
+    color: #ffffff;
+}
+
+
+nav ul {
+    margin-right: 20px;
+    
+}
+
+.drop-down {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 3;
+    width: 100%;
+    left: 0;
+}
+
+.drop-down li a {
+    width: 87px;
+    display: flex;
+    justify-content: center;
 }
 
 .navbar-brand {
-    font-size: 32px;
+    font-size: 36px;
     text-decoration: none;
-    color: #ffffff;
+    color: black;
+    font-weight: 900;
+    transition: all 0.5s ease-in-out;
     margin-left: 50px;
 }
 
-.navbar-wrap {
-    display: flex;
-    flex-wrap: row nowrap;
-    margin-right: 30px;
+.navbar-brand:hover {
+    transform: scale(1.1);
 }
 
 .entry {
+    margin-left: 20px;
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    border: 0;
+    border: 1px solid black;
     font-size: 20px;
     line-height: 20px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    background-color: #ffffff;
+    background-color: transparent;
+
+    
 }
 
 .entry:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 
@@ -166,7 +197,8 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-
+    right: 0;  /* Указывает, что оверлей должен растягиваться до правого края контейнера */
+    bottom: 0;
 }
 
 h1 {
@@ -200,4 +232,54 @@ h4 {
 .watch-new-anime:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 10px rgb(219, 176, 89);
+}
+
+
+/* trailer */
+
+.trailer {
+    position: relative;
+
+}
+
+.trailer__anime {
+    display: block;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+
+}
+
+.trailer--anime {
+    position: relative;
+    width: 100%;
+    max-height: 94.4vh;
+    overflow: hidden;
+}
+
+.info--anime {
+    position: absolute;  /* Абсолютное позиционирование для наложения текста на видео */
+    top: 50%;  /* Центрирует содержимое по вертикали */
+    left: 50%;  /* Центрирует содержимое по горизонтали */
+    transform: translate(-50%, -50%);  /* Смещает элемент, чтобы центр был точно в центре контейнера */
+    z-index: 3;  /* Убедитесь, что текст и кнопки находятся над оверлеем */
+}
+
+
+.mutebtn {
+    width: 55px;
+    height: 55px;
+    font-size: 25px;
+    color: white;
+    background-color: gray;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.mutebtn:hover {
+    transform: scale(1.1);
 }
