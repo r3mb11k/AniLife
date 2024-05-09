@@ -32,8 +32,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+// Кнопка play и pause
+
+document.addEventListener('DOMContentLoaded', function() {
+    var video = document.getElementById('trailer');
+    var playButton = document.querySelector('.trailer-play');
+    var pauseButton = document.querySelector('.trailer-stop');
+
+    playButton.addEventListener('click', function() {
+        video.play();
+    });
+
+    pauseButton.addEventListener('click', function() {
+        video.pause();
+    });
+});
+
+
 // звук 0.3 по дефолту
 
 let vid = document.getElementById("trailer");
 vid.volume = 0.3;
+
 

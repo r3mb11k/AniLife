@@ -407,3 +407,42 @@ h4 {
     padding: 15px 15px;
     border-radius: 15px;
 }
+
+.trailer-play {
+    margin-top: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 25px;
+    color: white;
+    border-radius: 50%;
+    background-color: gray;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+    color: #ffffff;
+}
+
+.trailer-play:hover {
+    transform: scale(1.1);
+}
+
+
+.trailer-stop {
+    margin-top: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    color: white;
+    border-radius: 50%;
+    background-color: gray;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.trailer-stop:hover {
+    transform: scale(1.1);
+}
