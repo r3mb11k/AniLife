@@ -1,3 +1,5 @@
+// Кнопка звук вкл/выкл
+
 document.addEventListener('DOMContentLoaded', function() {
         const video = document.querySelector('.trailer__anime');
         const toggleSoundButton = document.querySelector('.mutebtn');
@@ -13,6 +15,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+// Кнопка полный экран
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var video = document.getElementById('trailer');
+        var fullscreenButton = document.querySelector('.fullscreen-btn');
+    
+        fullscreenButton.addEventListener('click', function() {
+            if (!document.fullscreenElement) {
+                video.requestFullscreen().catch(err => {
+                    alert(`Ошибка при попытке перейти в полноэкранный режим: ${err.message} (${err.name})`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        });
+    });
+    
+// звук 0.3 по дефолту
 
 let vid = document.getElementById("trailer");
 vid.volume = 0.3;
+
