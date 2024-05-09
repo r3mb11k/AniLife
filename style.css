@@ -1,0 +1,203 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+}
+
+.container-header {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    z-index: 3;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+.navbar-menu li {
+    display: inline-block;
+
+}
+
+
+.navbar-menu li a {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    opacity: 0.5;
+    text-decoration: none;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-menu li a:hover {
+    opacity: 1;
+}
+
+.navbar-brand {
+    font-size: 32px;
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 50px;
+}
+
+.navbar-wrap {
+    display: flex;
+    flex-wrap: row nowrap;
+    margin-right: 30px;
+}
+
+.entry {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 0;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+}
+
+.entry:hover {
+    transform: scale(1.05);
+}
+
+
+.image {
+    margin-bottom: 10px;
+}
+
+.image img {
+    height: 300px;
+    width: 250px;
+    border-radius: 15px;
+}
+
+
+.info h3 {
+    font-size: 20px;
+    
+}
+
+.info {
+    max-width: 250px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: row nowrap;
+    align-items: center;
+    font-weight: bold;
+}
+
+.info .year {
+    opacity: 0.5;
+}
+
+.watch {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background: orange;
+    height: 30px;
+    width: 80px;
+    border: 0;
+    border-radius: 10px;
+    margin-left: 90px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Добавляем обертку, чтобы элементы могли переноситься на новую строку */
+    justify-content: flex-start; /* Распределение элементов в начале строки */
+}
+
+.row {
+    margin-top: 50px;
+    margin-left: 50px;
+    display: flex;
+}
+
+.anime {
+    margin-top: 30px;
+    margin-right: 20px; /* Добавляем немного отступа между элементами */
+}
+
+.header {
+    position: relative;
+    min-height: 700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url('https://www.dexerto.com/cdn-image/wp-content/uploads/2024/04/03/kaiju-no-8-manga_is-the-kaiju-no-8-manga-finished.jpg?width=3840&quality=60&format=auto');
+}
+
+.main {
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+h1 {
+    color:#ffffff;
+    font-size: 52px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h4 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 30px;
+    opacity: 0.5;
+}
+
+.watch-new-anime {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 18px;
+    border: 0;
+    border-radius: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: orange;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.watch-new-anime:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgb(219, 176, 89);
+}
