@@ -10,6 +10,12 @@ body {
     min-width: 320px;
 }
 
+
+
+
+/*ШАПКА   ШАПКА    ШАПКА    ШАПКА   ШАПКА   ШАПКА    ШАПКА    ШАПКА*/ 
+
+
 .navbar {
     position: fixed;
     top: 0;
@@ -38,6 +44,7 @@ nav li:hover .drop-down {
 
 
 nav li a {
+    position: relative;
     text-decoration: none;
     padding: 15px;
     color:black;
@@ -54,6 +61,35 @@ nav li a:hover {
     background-color: black;
     color: #ffffff;
 }
+
+/* DATA */
+
+.aboutUs:before {
+    content: attr(data-info);
+    position: absolute;
+    top: 100%;
+    left: -35px;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 15px;
+    width: 120px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+}
+
+nav li a:hover:before {
+    visibility: visible;
+    z-index: 1;
+    opacity: 1;
+    top: calc( 100% + 10px);
+}
+
+
+/* DATA */
+
 
 
 nav ul {
@@ -109,74 +145,126 @@ nav ul {
     transform: scale(1.1);
 }
 
+/*ШАПКА   ШАПКА    ШАПКА    ШАПКА   ШАПКА   ШАПКА    ШАПКА    ШАПКА*/ 
 
-.image {
-    margin-bottom: 10px;
+
+
+
+/*  карточки аниме  карточки аниме  карточки аниме*/
+
+.popular {
+    position: relative;
+    margin-top: 50px;
+    margin-left: 60px;
+    font-size: 32px;
+    font-weight: bold;
 }
+
+
+.container {
+    margin-top: 25px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 30px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: rgb(102, 102, 102);
+    padding:  30px 30px 0px 30px;
+    border-radius: 15px;
+
+}
+
+.animecard-site {
+    box-sizing: border-box;
+}
+
 
 .image img {
     height: 300px;
     width: 230px;
     border-radius: 15px;
+    transition: all 0.5s ease-in-out;
+}
+
+.image {
+    position: relative;
 }
 
 
-.info h3 {
-    font-size: 20px;
-    
+.image img:hover {
+    transform: scale(1.05);
 }
 
-.info {
-    max-width: 250px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: row nowrap;
-    align-items: center;
-    font-weight: bold;
-}
-
-.info .year {
-    opacity: 0.5;
-}
-
-.watch {
-    margin-top: 10px;
+.watch-anime {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
     color: #ffffff;
     background: orange;
     height: 30px;
-    width: 80px;
+    width: 100px;
     border: 0;
-    border-radius: 10px;
-    margin-left: 90px;
+    border-radius: 15px;
     font-weight: bold;
     cursor: pointer;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-left: 30px;
+
+
+.popular-name {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    z-index: -2;
+    visibility: hidden;
+    opacity: 0;
 }
 
-.row {
-    margin-top: 50px;
-    margin-left: 50px;
-    display: flex;
-    flex-wrap: wrap;
+
+.popular-year {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    z-index: -3;
+    visibility: hidden;
+    opacity: 0;
 }
 
-.col-md-4 {
-    box-sizing: border-box;
+
+.image:hover .watch-anime,
+.image:hover .popular-name,
+.image:hover .popular-year {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1; 
+    transition: all 0.5s ease-in-out;
 }
 
-.anime {
-    margin-top: 30px;
-    margin-right: 20px; /* Добавляем немного отступа между элементами */
-}
+
+
+/*  карточки аниме  карточки аниме  карточки аниме*/
+
+
+
+/*  главная НОВОЕ АНИМЕ главная НОВОЕ АНИМЕ главная НОВОЕ АНИМЕ*/
+
+    /*  Кнопки след. прош.  Кнопки след. прош.  Кнопки след. прош.*/
 
 .header {
     position: relative;
@@ -186,6 +274,46 @@ nav ul {
     background-attachment: fixed;
     background-image: url('https://www.dexerto.com/cdn-image/wp-content/uploads/2024/04/03/kaiju-no-8-manga_is-the-kaiju-no-8-manga-finished.jpg?width=3840&quality=60&format=auto');
 }
+
+.btn-switch {
+    position: relative;
+    top: 350px;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prev, .next {
+    margin-right: 60px;
+    margin-left: 60px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 55px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background: none;
+    color: #000000;
+    opacity: 0.5;
+}
+
+
+
+
+.next:hover {
+    transform: scale(1.2);
+}
+
+.prev:hover {
+    transform: scale(1.2);
+}
+
+
+/*  Кнопки след. прош.  Кнопки след. прош.  Кнопки след. прош.*/
+
 
 .main {
     min-height: 700px;
@@ -245,7 +373,12 @@ h4 {
 }
 
 
-/* Карточка аниме  */
+/*  главная НОВОЕ АНИМЕ главная НОВОЕ АНИМЕ главная НОВОЕ АНИМЕ*/
+
+
+
+
+/* Карточка аниме  Карточка аниме Карточка аниме - ДОДЕЛАТЬ*/
 
 .card-body {
     position: relative;
@@ -446,3 +579,8 @@ h4 {
 .trailer-stop:hover {
     transform: scale(1.1);
 }
+
+
+
+/* Карточка аниме  Карточка аниме Карточка аниме - ДОДЕЛАТЬ*/
+

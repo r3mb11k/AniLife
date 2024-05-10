@@ -8,14 +8,14 @@
 </head>
 <body>
 
-
+<!-- Шапка сайта -->
     <header id="navbar" class="navbar">
 
         <a href="index.html" class="navbar-brand">AniLife</a>
 
         <nav>
             <ul>
-                <li><a href="#">О нас</a></li>
+                <li><a href="#" data-info="AniLife - 2024" class="aboutUs">О нас</a></li>
                 <li><a href="#">Аниме</a>
                     <ul class="drop-down">
                         <li><a href="#">2024</a></li>
@@ -31,30 +31,71 @@
             </ul>
 
         </nav>
-
     </header>
+<!-- Шапка сайта -->
 
-    <header class="header">
 
+
+<!-- карточка аниме подробно -->
+    <header id="new-anime" class="header">
         <div class="container-main">
+            <div class="btn-switch">
+                <button class="prev">&lt;</button>
+                <button class="next">&gt;</button>
+            </div>
             <div class="main">
                 <div class="header-content">
-                    <h1>Новое аниме</h1>
-                    <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
-
+                    <h1 id="anime-title">Новое аниме</h1>
+                    <h4 id="anime-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
                     <button class="watch-new-anime">Смотреть</button>
                 </div>
             </div>
         </div>
 
-
         <div class="overlay"></div>
+
     </header>
+<!-- карточка аниме подробно -->
 
 
+
+<!-- главный экран карточки аниме -->
+
+
+<div class="popular">Популярное аниме</div>
     <div class="container">
         <div class="row">
 
+
+            <div class="animecard-site-popular">
+                <div class="anime-popular">
+                    <div class="image">
+                        <img src="https://upload.wikimedia.org/wikipedia/ru/1/11/Naruto-manga.jpg" alt="">
+
+                            <h3 class="popular-name">Наруто</h3>
+                            <span class="popular-year">2008</span>
+    
+                        <button class="watch-anime">Смотреть</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="anime">
+                    <div class="image">
+                        <img src="https://upload.wikimedia.org/wikipedia/ru/1/11/Naruto-manga.jpg" alt="">
+                    </div>
+
+                    <div class="info">
+                        <h3>Наруто</h3>
+                        <span class="year">2008</span>
+                    </div>
+
+                    <button class="watch">Смотреть</button>
+                </div>
+            </div>
+
             <div class="col-md-4">
                 <div class="anime">
                     <div class="image">
@@ -87,24 +128,6 @@
             </div>
 
 
-
-            <div class="col-md-4">
-                <div class="anime">
-                    <div class="image">
-                        <img src="https://upload.wikimedia.org/wikipedia/ru/1/11/Naruto-manga.jpg" alt="">
-                    </div>
-
-                    <div class="info">
-                        <h3>Наруто</h3>
-                        <span class="year">2008</span>
-                    </div>
-
-                    <button class="watch">Смотреть</button>
-                </div>
-            </div>
-
-
-
             <div class="col-md-4">
                 <div class="anime">
                     <div class="image">
@@ -137,7 +160,6 @@
             </div>
 
 
-
             <div class="col-md-4">
                 <div class="anime">
                     <div class="image">
@@ -154,61 +176,11 @@
             </div>
 
 
-
-            <div class="col-md-4">
-                <div class="anime">
-                    <div class="image">
-                        <img src="https://upload.wikimedia.org/wikipedia/ru/1/11/Naruto-manga.jpg" alt="">
-                    </div>
-
-                    <div class="info">
-                        <h3>Наруто</h3>
-                        <span class="year">2008</span>
-                    </div>
-
-                    <button class="watch">Смотреть</button>
-                </div>
-            </div>
-
-
-
-            <div class="col-md-4">
-                <div class="anime">
-                    <div class="image">
-                        <img src="https://upload.wikimedia.org/wikipedia/ru/1/11/Naruto-manga.jpg" alt="">
-                    </div>
-
-                    <div class="info">
-                        <h3>Наруто</h3>
-                        <span class="year">2008</span>
-                    </div>
-
-                    <button class="watch">Смотреть</button>
-                </div>
-            </div>
-
-
-
-            <div class="col-md-4">
-                <div class="anime">
-                    <div class="image">
-                        <img src="https://upload.wikimedia.org/wikipedia/ru/1/11/Naruto-manga.jpg" alt="">
-                    </div>
-
-                    <div class="info">
-                        <h3>Наруто</h3>
-                        <span class="year">2008</span>
-                    </div>
-
-                    <button class="watch">Смотреть</button>
-                </div>
-            </div>
-
-            
-            
 
         </div>
     </div>
+<!-- главный экран карточки аниме -->
+
 
     <script src="app.js"></script>
 </body>
