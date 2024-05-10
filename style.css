@@ -6,6 +6,16 @@
 }
 
 
+html {
+    overflow: auto; /* Включает прокрутку */
+    scrollbar-width: none; /* Скрывает полосу прокрутки в Firefox */
+  }
+  
+  html::-webkit-scrollbar {
+    display: none; /* Скрывает полосу прокрутки в Chrome, Safari и новых версиях Edge */
+  }
+  
+
 body {
     min-width: 320px;
     background-color: #252526;
@@ -285,7 +295,7 @@ nav ul {
     height: 50px;
     border-radius: 50%;
     border: none;
-    font-size: 55px;
+    font-size: 35px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     background: none;
@@ -295,11 +305,11 @@ nav ul {
 
 
 .next:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .prev:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 
