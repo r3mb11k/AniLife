@@ -131,6 +131,10 @@ nav ul {
     margin-left: 100px;
 }
 
+.navbar-brand span {
+    color: red;
+}
+
 .navbar-brand:hover {
     transform: scale(1.05);
 }
@@ -179,21 +183,50 @@ nav ul {
 
 .animecard-site-popular {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap; /* Добавляем возможность переноса элементов на новую строку */
+    gap: 17px; /* Задаем отступ между карточками */
     margin-bottom: 80px;
+    justify-content: start; /* Выравниваем элементы слева */
+    width: 100%;
 }
 
 
 .image img {
-    height: 300px;
-    width: 200px;
+    height: 100%;
+    width: 100%;
     border-radius: 20px;
     cursor: pointer;
+    object-fit: cover;
+
 }
 
 .image {
+    height: 300px;
+    width: 200px;
     position: relative;
     transition: all 0.5s ease-in-out;
+    background-color: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.6);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    opacity: 0; /* Initially transparent */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+    border-radius: 20px; /* Keep the rounded corners */
+}
+
+.image:hover::after {
+    opacity: 1; 
 }
 
 
@@ -201,8 +234,34 @@ nav ul {
     transform: scale(1.05);
 }
 
+.popular-genre {
+    position: absolute;
+    top: 30px;
+    left: -10px;
+    font-size: 12px;
+    z-index: -3;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.popular-description {
+    position: absolute;
+    top: 50px;
+    left: -10px;
+    font-size: 12px;
+    z-index: -4;
+    visibility: hidden;
+    opacity: 0;
+    color: #ffffff;
+    font-weight: 600;
+    width: 190px;
+}
+
+
 
 .watch-anime,
+.popular-genre,
+.popular-description,
 .popular-name
 {
     transition: transform 0.5s ease, opacity 0.3s ease;
@@ -222,7 +281,8 @@ nav ul {
     width: 150px;
     border: 0;
     border-radius: 15px;
-    font-weight: bold;
+    font-weight: 900;
+    font-size: 16px;
     cursor: pointer;
     z-index: -1;
     visibility: hidden;
@@ -235,13 +295,13 @@ nav ul {
     position: absolute;
     top: 0px;
     left: 0px;
-    font-weight: bold;
+    font-weight: 900;
     font-size: 25px;
     z-index: -2;
     visibility: hidden;
     opacity: 0;
     transition: inherit;
-    color: black;
+    color: orange;
 }
 
 
@@ -250,17 +310,30 @@ nav ul {
     visibility: visible;
     z-index: 1; 
     opacity: 1;
-    transform: translate(-50%, -50%); /* Поднимается чуть выше начальной позиции */
+    transform: translate(-50%, -25%); /* Поднимается чуть выше начальной позиции */
 }
 
 .image:hover .popular-name {
     visibility: visible;
     z-index: 1; 
     opacity: 1;
-    transform: translate(15px, 10px); /* Перемещается внутрь на 10 пикселей от углов */
+    transform: translate(10px, 5px); /* Перемещается внутрь на 10 пикселей от углов */
 }
 
+.image:hover .popular-genre {
+    visibility: visible;
+    z-index: 1; 
+    opacity: 0.8;
+    color: rgb(229, 255, 0);
+    transform: translate(20px, 10px); /* Перемещается внутрь на 10 пикселей от углов */
+}
 
+.image:hover .popular-description {
+    visibility: visible;
+    z-index: 1; 
+    opacity: 1;
+    transform: translate(20px, 30px); /* Перемещается внутрь на 10 пикселей от углов */
+}
 /*  карточки аниме  карточки аниме  карточки аниме*/
 
 
